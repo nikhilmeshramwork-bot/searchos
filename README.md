@@ -28,11 +28,19 @@ exercise.
 ## What it does
 
 - Captures a role and job description.
-- Scores fit against a verified skills and evidence library.
-- Separates strong, medium, and weak opportunities.
+- Scores fit across role family, capabilities, domain, location, seniority, and
+  explicit risk penalties.
+- Explains every score with a visible breakdown, strengths, gaps, and a
+  recommended decision.
+- Routes each role to the Product & Business Operations or AI Workflow &
+  Product CV track.
+- Separates strong, review, and low-fit opportunities.
 - Maintains a human approval queue before any application action.
 - Tracks applications through a visible pipeline.
 - Manages a product evidence library with public/draft controls.
+- Selects only public, verified product evidence such as PowerCost Lab,
+  Inkwell, and SearchOS.
+- Creates a copyable decision packet with an approval checklist.
 - Provides a dedicated recruiter portfolio at `/portfolio`.
 - Persists edits locally in the browser.
 
@@ -46,10 +54,11 @@ exercise.
 
 ## Current scope
 
-The prototype demonstrates the workflow and interaction model. It does not
-submit applications, scrape job boards, or call an external AI service. Those
-integrations belong behind explicit permission, privacy controls, and review
-gates.
+The current layer implements manual role intake, deterministic qualification,
+evidence selection, approval, and outcome tracking. It does not submit
+applications, scrape job boards, or call an external AI service. Discovery
+connectors and follow-up scheduling remain separate layers behind explicit
+permission, privacy controls, and review gates.
 
 ## Run locally
 
@@ -65,7 +74,7 @@ Open [http://localhost:3000](http://localhost:3000).
 For a production build:
 
 ```bash
-npm run build
+npm run quality
 npm start
 ```
 
@@ -79,9 +88,10 @@ npm start
 
 ## Product direction
 
-Planned extensions include role-source connectors, structured resume variants,
-approval-based outreach generation, analytics on conversion by channel, and
-AI-assisted tailoring constrained to a verified evidence library.
+The next extensions are approved role-source connectors, structured resume
+variants, approval-based outreach generation, follow-up scheduling, conversion
+analytics by channel, and AI-assisted tailoring constrained to the verified
+evidence library.
 
 ## About
 

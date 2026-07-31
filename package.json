@@ -1,13 +1,16 @@
 {
   "name": "searchos",
   "version": "1.0.0",
+  "type": "module",
   "private": true,
   "description": "An evidence-led job search operating system with fit scoring, approval gates, and pipeline tracking.",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "check": "tsc --noEmit"
+    "check": "tsc --noEmit",
+    "test": "node --experimental-strip-types --test tests/*.test.ts",
+    "quality": "npm run check && npm test && npm run build"
   },
   "dependencies": {
     "next": "16.2.12",
